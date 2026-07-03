@@ -1,229 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO Title & Description -->
-    <title>Aditya Raj | Web Developer & Portfolio</title>
-    <meta name="description"
-        content="Aditya Raj - Web Developer. Explore projects, skills in React, Next.js, Node.js, MongoDB, and coding experiments.">
-
-    <!-- Keywords (optional, still fine for personal sites) -->
-    <meta name="keywords"
-        content="Aditya Raj, Web Developer, Portfolio, React, Next.js, Node.js, MongoDB, Coding Projects">
-
-    <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" content="Aditya Raj | Web Developer">
-    <meta property="og:description"
-        content="Check out the portfolio and projects of Aditya Raj, a passionate web developer.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="/img/profile.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.png" type="image/png">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://yourwebsite.com">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>Aditya Raj</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .wrapper {
+            padding: 20px;
+        }
+        h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+        p {
+            color: #8b949e;
+            font-size: 1.1rem;
+            margin: 0 0 30px 0;
+        }
+        /* Simple clean loading line */
+        .loader-bar {
+            width: 150px;
+            height: 3px;
+            background-color: #21262d;
+            border-radius: 2px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .loader-bar::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 40px;
+            background-color: #58a6ff;
+            border-radius: 2px;
+            animation: shift 1.8s infinite linear;
+        }
+        @keyframes shift {
+            0% { left: -40px; }
+            100% { left: 150px; }
+        }
+    </style>
 </head>
-
 <body>
-    <div class="fixed inset-0 -z-10 bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]">
-    </div>
 
-    <header class="header">
-        <nav class="nav">
-            <ul class="nav-ul">
-                <div class="bars-logo">
-                    <img class="img-logo img-bars" src="/img/menu.png" alt="">
-                </div>
-                <div class="nav-ul-hidden hidden">
-                    <div class="div-close">
-                        <img class="img-logo" src="/img/close.png" alt="">
-                    </div>
-                    <li class="li-hidden animated-underline-white"><a href="#">Home</a></li>
-                    <li class="li-hidden animated-underline-white"><a href="#about">About</a></li>
-                    <li class="li-hidden animated-underline-white"><a href="#skills">Skills</a></li>
-                    <li class="li-hidden animated-underline-white"><a href="#portfolio">Portfolio</a></li>
-                    <li class="li-hidden animated-underline-white"><a href="#contact">Contact</a></li>
-                </div>
-                <div class="nav-ul-left">
-                    <li class="animated-underline"><a href="#">Home</a></li>
-                    <li class="animated-underline"><a href="#about">About</a></li>
-                    <li class="animated-underline"><a href="#skills">Skills</a></li>
-                    <li class="animated-underline"><a href="#portfolio">Portfolio</a></li>
-                    <li class="animated-underline"><a href="#contact">Contact</a></li>
-                </div>
-                <div class="nav-ul-right">
-                    <li><a target="_blank" href="https://github.com/adityarajio"><img src="/img/github.png"
-                                class="img-logo" alt=""></a></li>
-                    <li><a target="_blank" href="http://instagram.com/adityaraj_io/"><img src="/img/instagram.png"
-                                class="img-logo" alt=""></a></li>
-                </div>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="intro">
-            <div class="container">
-                <div class="imgContainer">
-                    <img style="object-fit: cover;" class="profile-img" src="/img/profile.jpg" alt="">
-                </div>
-                <div class="infoContainer">
-                    <span class="title">Aditya Raj</span>
-                    <span class="sub-title">Web Developer</span>
-                    <span class="desc">
-                        Coding. Projects. Learning. That’s me — Aditya Raj.
-                    </span>
-                    <div class="scroll-down">
-                        <a href="#about">See More <img src="/img/arrow.png" class="img-logo" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="about">
-            <div class="section-title">About Me</div>
-            <div class="section-subtitle">Who is Aditya Raj</div>
-            <div class="aboutContainer">
-                <div class="info-about">
-                    <span class="about-title">About me</span>
-                    <span class="about-desc">Hi, I’m Aditya Raj!
-                        I build things with code. From web apps to small experiments, I enjoy turning ideas into working
-                        projects. Here, you’ll find some of the things I’ve been working on, the technologies I use, and
-                        a bit of my learning journey along the way.</span>
-                </div>
-                <div class="image-about">
-                    <img class="border" alt="">
-                </div>
-            </div>
+<div class="wrapper">
+    <h1>Aditya Raj</h1>
+    <p>Site under construction. Back in a few weeks.</p>
+    <div class="loader-bar"></div>
+</div>
 
-        </section>
-        <section id="skills" class="skills">
-            <div class="section-title">Skills</div>
-            <div class="section-subtitle">What I love to do</div>
-            <div class="skillsContainer">
-                <div class="stack-card">
-                    <div class="card-top">
-                        <img src="/img/nextjs.png" alt="nextjslogo">
-                    </div>
-                    <div class="card-bottom">
-                        <h3>Next JS</h3>
-                        <p>Full Stack</p>
-                    </div>
-                </div>
-                <div class="stack-card">
-                    <div class="card-top">
-                        <img src="/img/react.png" alt="React Logo">
-                    </div>
-                    <div class="card-bottom">
-                        <h3>React</h3>
-                        <p>Redux, Frontend</p>
-                    </div>
-                </div>
-                <div class="stack-card">
-                    <div class="card-top">
-                        <img src="/img/mongodb.png" alt="MongoDB Logo">
-                    </div>
-                    <div class="card-bottom">
-                        <h3>MongoDB</h3>
-                        <p>No Sql Database</p>
-                    </div>
-                </div>
-                <div class="stack-card">
-                    <div class="card-top">
-                        <img src="/img/Node.js_logo.png" style="object-fit: contain;" alt="React Logo">
-                    </div>
-                    <div class="card-bottom">
-                        <h3>Node Js</h3>
-                        <p>Express, Backend</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="portfolio" id="portfolio">
-            <div style="color: aliceblue;" class="section-title">Portfolio</div>
-            <div style="color:white" class="section-subtitle">My Recent Works</div>
-
-            <div class="portfolio-container">
-                <!-- Portfolio Card -->
-                <div class="portfolio-card">
-                    <img src="img/rankedge.jpg" alt="RankEdge Project" />
-                    <div class="portfolio-content">
-                        <h3>RankEdge</h3>
-                        <p>
-                            Master JEE the Smarter Way 🚀 <br>
-                            An PYQ questions practice platform with smart analytics to boost your rank and save prep time.
-                        </p>
-                        <a href="https://rankedge.vercel.app" target="_blank" class="portfolio-btn">Visit Website</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact" id="contact">
-            <div class="section-title">Contact</div>
-            <div class="section-subtitle">Contact Me</div>
-
-            <div class="contact-container">
-                <h2>Contact Me</h2>
-                <form class="contact-form" action="https://formspree.io/f/mwpozdnw" method="POST">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Aditya Raj. All rights reserved.</p>
-            <nav class="footer-nav">
-                <a href="#">Home</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </footer>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script>
-        let divClose = document.querySelector('.div-close');
-        let barsLogo = document.querySelector('.img-bars');
-        let navUlHidden = document.querySelector('.nav-ul-hidden');
-        let navUlHiddenli = document.querySelectorAll('.li-hidden');
-        barsLogo.addEventListener('click', () => {
-            navUlHidden.classList.toggle('hidden');
-        });
-        divClose.addEventListener('click', () => {
-            navUlHidden.classList.toggle('hidden');
-        });
-        navUlHiddenli.forEach((li) => {
-            li.addEventListener('click', () => {
-                navUlHidden.classList.toggle('hidden');
-            });
-        });
-    </script>
 </body>
-
 </html>
-
