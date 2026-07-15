@@ -1,68 +1,387 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditya Raj</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .wrapper {
-            padding: 20px;
-        }
-        h1 {
-            color: #fff;
-            font-size: 2.5rem;
-            margin: 0 0 10px 0;
-            font-weight: 600;
-        }
-        p {
-            color: #8b949e;
-            font-size: 1.1rem;
-            margin: 0 0 30px 0;
-        }
-        /* Simple clean loading line */
-        .loader-bar {
-            width: 150px;
-            height: 3px;
-            background-color: #21262d;
-            border-radius: 2px;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
-        .loader-bar::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 40px;
-            background-color: #58a6ff;
-            border-radius: 2px;
-            animation: shift 1.8s infinite linear;
-        }
-        @keyframes shift {
-            0% { left: -40px; }
-            100% { left: 150px; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Aditya Raj — Aspiring Developer</title>
+
+  <meta name="description" content="Aditya Raj is an aspiring developer building projects with HTML, CSS, JavaScript, and Java. View my portfolio, skills, and projects." />
+  <meta name="keywords" content="Aditya Raj, Aditya Raj developer, Aditya Raj portfolio, aditya raj io" />
+  <meta name="author" content="Aditya Raj" />
+  <link rel="canonical" href="https://adityarajio.github.io/" />
+
+  <!-- Open Graph (for link previews on WhatsApp, LinkedIn, Instagram, Discord, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aditya Raj — Aspiring Developer" />
+  <meta property="og:description" content="Aspiring developer building projects with HTML, CSS, JavaScript, and Java." />
+  <meta property="og:url" content="https://adityarajio.github.io/" />
+  <meta property="og:image" content="https://adityarajio.github.io/img/profile-picture.jpg" />
+
+  <!-- Structured data so Google connects this site to your name and profiles -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aditya Raj",
+    "url": "https://adityarajio.github.io/",
+    "image": "https://adityarajio.github.io/img/profile-picture.jpg",
+    "jobTitle": "Aspiring Developer",
+    "sameAs": [
+      "https://github.com/adityarajio",
+      "https://www.instagram.com/adityaraj_io/"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Cabinet+Grotesk:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="wrapper">
-    <h1>Aditya Raj</h1>
-    <p>Site under construction. Back in a few weeks.</p>
-    <div class="loader-bar"></div>
-</div>
+  <!-- Custom cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Ambient -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ab ab-1"></div>
+    <div class="ab ab-2"></div>
+    <div class="ab ab-3"></div>
+  </div>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <div class="toast-dot"></div>
+    <span id="toast-msg">Message sent!</span>
+  </div>
+
+  <!-- ══════════ NAV ══════════ -->
+  <nav id="nav">
+    <div class="nav-logo">
+      <div class="nav-logo-dot"></div>
+      Aditya Raj
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-r">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"></button>
+      <div class="nav-burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════ HERO ══════════ -->
+  <div class="wrap">
+    <section id="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="hero-eyebrow">Aspiring Dev · Open to work</div>
+          <h1 class="hero-name">
+            <span class="line"><span>Turning</span></span>
+            <span class="line"><span>Code</span></span>
+            <span class="line"><span class="stroke">Daily.</span></span>
+          </h1>
+          <p class="hero-sub">
+            Hey, I'm <strong>Aditya</strong> — An aspiring developer taking a fresh start. Currently learning Java,
+            writing my first programs, and sharing everything I discover along the way.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-main">
+              View Projects
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#contact" class="btn-outline">Let's talk</a>
+          </div>
+          <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            scroll to explore
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-photo-frame">
+            <div class="blob-behind"></div>
+            <div class="photo-blob">
+              <div class="photo-placeholder-inner">
+                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+                <span><img src="img/profile-picture.jpg" alt="Aditya Raj"></span>
+              </div>
+            </div>
+            <div class="float-badge">
+              <div class="badge-dot"></div>
+              Code Log Active
+            </div>
+            <div class="float-badge">
+              <div class="badge-dot"></div>
+              Aspiring · dev
+            </div>
+            <div class="corner-tag">aditya.dev</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ MARQUEE ══════════ -->
+    <div class="marquee-strip">
+      <div class="marquee-track" id="marquee">
+        <!-- items duplicated in JS -->
+      </div>
+    </div>
+
+    <!-- ══════════ ABOUT ══════════ -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="rv">
+          <div class="section-header">
+            <div class="section-eyebrow">About Me</div>
+            <h2 class="section-title">Growth by design.<br><span class="dim">Driven by curiosity.</span></h2>
+          </div>
+        </div>
+        <div class="rv rv-delay-1">
+          <div class="about-text">
+            <p>I believe that the ability to learn is the most important skill in technology.
+              My approach is built on a foundation of intense curiosity, consistent
+              practice, and the drive to understand how systems work under the hood.</p>
+            <p>I view every line of code as an investment in my growth. My process is
+              defined by "why doesn't this work?" moments—the challenging, late-night
+              sessions that turn complex problems into "oh, <em>that's</em> how it works"
+              breakthroughs. This mindset is what I bring to every project I take on.</p>
+            <p>I am actively seeking collaborations and opportunities to keep growing.
+              If you are building something meaningful, I would love to contribute
+              to the journey.</p>
+          </div>
+        </div>
+        <div class="about-right" style="margin-top:3rem;">
+          <div class="stat-row rv rv-delay-1">
+            <div class="stat-n">∞</div>
+            <div class="stat-info">
+              <div class="stat-info-label">Growth Mindset</div>
+              <div class="stat-info-sub">Dedicated to constant improvement and iteration</div>
+            </div>
+          </div>
+          <div class="stat-row rv rv-delay-2">
+            <div class="stat-n">100%</div>
+            <div class="stat-info">
+              <div class="stat-info-label">Problem Solver</div>
+              <div class="stat-info-sub">Turning complex challenges into simple solutions</div>
+            </div>
+          </div>
+          <div class="stat-row rv rv-delay-3">
+            <div class="stat-n">Day 1</div>
+            <div class="stat-info">
+              <div class="stat-info-label">Active Learner</div>
+              <div class="stat-info-sub">Building my foundation, one concept at a time</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════ SKILLS ══════════ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="skills-layout">
+          <div class="rv">
+            <div class="section-eyebrow">Skills</div>
+            <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,2.6rem)">What I<br>work with.</h2>
+            <p class="skills-sidebar" style="color:var(--text-2);line-height:1.75;margin-top:1rem;font-size:.93rem;">
+              Everything here was learned hands-on — by building things, breaking them, and figuring out why.
+            </p>
+            <div class="skills-sidebar also" style="margin-top:1.5rem;">
+              <div class="also-label">Also familiar with</div>
+              <span class="also-tag">VS Code</span>
+              <span class="also-tag">Chrome DevTools</span>
+              <span class="also-tag">GitHub Pages</span>
+              <span class="also-tag">Netlify</span>
+              <span class="also-tag">Firebase</span>
+            </div>
+          </div>
+          <div class="skills-grid rv rv-delay-1">
+            <div class="skill-item">
+              <div class="skill-top">
+                <div class="skill-icon-box">🌐</div>
+                <span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-name">HTML5</div>
+              <div class="skill-desc">Semantic structure, accessibility, SEO best practices, and modern HTML patterns.
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-w=".92"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <div class="skill-icon-box">🎨</div>
+                <span class="skill-pct">87%</span>
+              </div>
+              <div class="skill-name">CSS3</div>
+              <div class="skill-desc">Flexbox, Grid, animations, custom properties, and pixel-perfect responsive
+                layouts.</div>
+              <div class="skill-track">
+                <div class="skill-fill" data-w=".87"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <div class="skill-icon-box">⚡</div>
+                <span class="skill-pct">45% Currently Learning</span>
+              </div>
+              <div class="skill-name">Java</div>
+              <div class="skill-desc">Core foundations. Arrays and Object Oriented Programming.
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-w=".80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-top">
+                <div class="skill-icon-box">🔧</div>
+                <span class="skill-pct">74%</span>
+              </div>
+              <div class="skill-name">Git & GitHub</div>
+              <div class="skill-desc">Version control, branching, open source workflow, and project hosting.</div>
+              <div class="skill-track">
+                <div class="skill-fill" data-w=".74"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ PROJECTS ══════════ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="rv" style="margin-bottom:3rem;">
+          <div class="section-eyebrow">Projects</div>
+          <h2 class="section-title">Things I'm <span class="dim">building.</span></h2>
+        </div>
+
+        <!-- Placeholder for projects -->
+        <div class="projects-grid" style="text-align: center; padding: 4rem 0;">
+          <p style="font-family: var(--ff-mono); color: var(--text-3);">
+            // Currently under construction.
+            <br>
+            Check back soon for new projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="rv" style="margin-bottom:3rem;">
+          <div class="section-eyebrow">Contact</div>
+          <h2 class="section-title">Let's build <span class="dim">something.</span></h2>
+        </div>
+        <div class="contact-grid">
+          <div class="rv rv-delay-1">
+            <div class="contact-big">Got an idea?<br>I'm all in.</div>
+            <p class="contact-sub">Whether it's an internship, a collab, or just a conversation about tech — send a
+              message. I respond fast.</p>
+            <div class="contact-socials">
+              <a href="https://github.com/adityarajio" class="c-social">
+                <div class="c-social-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                  </svg></div>
+                <span>GitHub — @adityaraj</span>
+                <svg class="c-social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/adityaraj_io/" class="c-social">
+                <div class="c-social-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="18" cy="6" r="1" fill="currentColor" />
+                  </svg></div>
+                <span>Instagram — Aditya Raj</span>
+                <svg class="c-social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="mailto:rajjeeaditya@email.com" class="c-social">
+                <div class="c-social-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg></div>
+                <span>rajjeeaditya@email.com</span>
+                <svg class="c-social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="rv rv-delay-2">
+            <div class="contact-form">
+              <div class="cf-row">
+                <div class="cf-group">
+                  <label class="cf-label" for="cf-name">Name</label>
+                  <input class="cf-input" id="cf-name" type="text" placeholder="Your name" />
+                </div>
+                <div class="cf-group">
+                  <label class="cf-label" for="cf-email">Email</label>
+                  <input class="cf-input" id="cf-email" type="email" placeholder="you@email.com" />
+                </div>
+              </div>
+              <div class="cf-group">
+                <label class="cf-label" for="cf-subject">Subject</label>
+                <input class="cf-input" id="cf-subject" type="text" placeholder="What's this about?" />
+              </div>
+              <div class="cf-group">
+                <label class="cf-label" for="cf-msg">Message</label>
+                <textarea class="cf-textarea" id="cf-msg" placeholder="Hey Aditya, I'd love to..."></textarea>
+              </div>
+              <button class="btn-send" onclick="sendMsg()">
+                Send Message
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer>
+      <div class="footer-l">© 2025 <span>Aditya Raj</span> — Built with HTML, CSS & JS</div>
+      <div class="footer-r">Made from scratch · No frameworks</div>
+    </footer>
+  </div><!-- /wrap -->
+
+  <script src="script.js"></script>
+
 </body>
+
 </html>
