@@ -1,6 +1,4 @@
-/* ═══════════════════════════════════════════
-   TOKENS
-═══════════════════════════════════════════ */
+
 :root {
   --blue:       #89C4E1;
   --blue-2:     #5BA8CC;
@@ -40,9 +38,6 @@
   --text-3:     #8AAABB;
 }
 
-/* ═══════════════════════════════════════════
-   RESET
-═══════════════════════════════════════════ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;font-size:16px;}
 body{
@@ -61,9 +56,6 @@ button{cursor:pointer;border:none;font-family:inherit;}
 ::-webkit-scrollbar-track{background:var(--bg);}
 ::-webkit-scrollbar-thumb{background:var(--blue-2);border-radius:4px;}
 
-/* ═══════════════════════════════════════════
-   CURSOR DOT
-═══════════════════════════════════════════ */
 #cursor{
   position:fixed;width:10px;height:10px;border-radius:50%;
   background:var(--blue);pointer-events:none;z-index:9999;
@@ -79,18 +71,12 @@ button{cursor:pointer;border:none;font-family:inherit;}
 }
 body:hover #cursor{opacity:1;}
 
-/* ═══════════════════════════════════════════
-   NOISE OVERLAY
-═══════════════════════════════════════════ */
 body::before{
   content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
   opacity:0.022;
 }
 
-/* ═══════════════════════════════════════════
-   AMBIENT BLOBS
-═══════════════════════════════════════════ */
 .ambient{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
 .ab{
   position:absolute;border-radius:50%;
@@ -121,9 +107,6 @@ body::before{
 [data-theme="light"] .ab-1{background:radial-gradient(circle,rgba(137,196,225,0.18) 0%,transparent 70%);}
 [data-theme="light"] .ab-2{background:radial-gradient(circle,rgba(91,168,204,0.12) 0%,transparent 70%);}
 
-/* ═══════════════════════════════════════════
-   GRID LINES BACKGROUND
-═══════════════════════════════════════════ */
 .grid-bg{
   position:fixed;inset:0;z-index:0;pointer-events:none;
   background-image:
@@ -133,15 +116,12 @@ body::before{
   mask-image:radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
 }
 
-/* ═══════════════════════════════════════════
-   LAYOUT
-═══════════════════════════════════════════ */
 .wrap{position:relative;z-index:1;}
 .container{max-width:1160px;margin:0 auto;padding:0 6%;}
 
-/* ═══════════════════════════════════════════
+/* 
    NAV
-═══════════════════════════════════════════ */
+ */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:500;
   padding:0 6%;height:68px;
@@ -193,9 +173,7 @@ nav.scrolled{
 .nav-burger{display:none;flex-direction:column;gap:5px;}
 .nav-burger span{width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:.3s;}
 
-/* ═══════════════════════════════════════════
-   HERO
-═══════════════════════════════════════════ */
+/* HERO */
 #hero{
   min-height:100svh;display:flex;align-items:center;
   padding:100px 6% 60px;
@@ -291,7 +269,6 @@ h1.hero-name .line:nth-child(3) span{animation-delay:.22s;}
 }
 @keyframes scanLine{0%{left:-100%;}100%{left:100%;}}
 
-/* Hero right — photo */
 .hero-right{
   display:flex;align-items:center;justify-content:center;
   position:relative;
@@ -300,7 +277,6 @@ h1.hero-name .line:nth-child(3) span{animation-delay:.22s;}
 .hero-photo-frame{
   position:relative;width:360px;height:420px;
 }
-/* Big blob behind */
 .blob-behind{
   position:absolute;
   width:380px;height:400px;
@@ -317,7 +293,6 @@ h1.hero-name .line:nth-child(3) span{animation-delay:.22s;}
   33%{border-radius:44% 56% 46% 54% / 60% 44% 56% 40%;}
   66%{border-radius:55% 45% 60% 40% / 42% 58% 42% 58%;}
 }
-/* Photo itself */
 .photo-blob{
   position:absolute;top:50%;left:50%;
   transform:translate(-50%,-50%);
@@ -337,7 +312,7 @@ h1.hero-name .line:nth-child(3) span{animation-delay:.22s;}
 }
 .photo-placeholder-inner svg{opacity:.35;}
 .photo-placeholder-inner span{font-family:var(--ff-mono);font-size:.65rem;opacity: .75;letter-spacing:.08em;}
-/* Floating badges */
+
 .float-badge{
   position:absolute;z-index:2;
   background:var(--surface);
@@ -364,33 +339,7 @@ h1.hero-name .line:nth-child(3) span{animation-delay:.22s;}
   letter-spacing:.06em;opacity:.6;
 }
 
-/* ═══════════════════════════════════════════
-   MARQUEE STRIP
-═══════════════════════════════════════════ */
-.marquee-strip{
-  padding:1.2rem 0;
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-  overflow:hidden;background:var(--bg-1);
-  position:relative;z-index:1;
-}
-.marquee-track{
-  display:flex;gap:0;width:max-content;
-  animation:marquee 22s linear infinite;
-}
-.marquee-track:hover{animation-play-state:paused;}
-@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
-.marquee-item{
-  display:flex;align-items:center;gap:1rem;
-  padding:0 2rem;white-space:nowrap;
-  font-family:var(--ff-mono);font-size:.72rem;
-  letter-spacing:.08em;color:var(--text-3);text-transform:uppercase;
-}
-.marquee-item .m-dot{color:var(--blue);font-size:.9rem;}
 
-/* ═══════════════════════════════════════════
-   SECTION SHARED
-═══════════════════════════════════════════ */
 .section{padding:120px 0;}
 .section-header{margin-bottom:4rem;}
 .section-eyebrow{
@@ -406,16 +355,12 @@ h1.hero-name .line:nth-child(3) span{animation-delay:.22s;}
 }
 .section-title .dim{color:var(--text-3);}
 
-/* reveal */
 .rv{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out);}
 .rv.in{opacity:1;transform:none;}
 .rv-delay-1{transition-delay:.1s;}
 .rv-delay-2{transition-delay:.2s;}
 .rv-delay-3{transition-delay:.3s;}
 
-/* ═══════════════════════════════════════════
-   ABOUT
-═══════════════════════════════════════════ */
 #about .container{
   display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;
 }
@@ -444,9 +389,8 @@ h1.hero-name .line:nth-child(3) span{animation-delay:.22s;}
 .stat-info-label{font-weight:700;font-size:.95rem;margin-bottom:.15rem;}
 .stat-info-sub{font-size:.8rem;color:var(--text-3);}
 
-/* ═══════════════════════════════════════════
-   SKILLS
-═══════════════════════════════════════════ */
+
+
 #skills{background:var(--bg-1);}
 .skills-layout{
   display:grid;grid-template-columns:260px 1fr;gap:4rem;align-items:start;
@@ -507,18 +451,13 @@ h1.hero-name .line:nth-child(3) span{animation-delay:.22s;}
 }
 .skill-fill.in{transform:scaleX(1);}
 
-/* ═══════════════════════════════════════════
-   PROJECTS
-═══════════════════════════════════════════ */
+
 .projects-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:1.2rem;
 }
 
-/* ═══════════════════════════════════════════
-   CONTACT
-═══════════════════════════════════════════ */
 #contact{background:var(--bg-1);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
 .contact-big{
@@ -577,9 +516,7 @@ h1.hero-name .line:nth-child(3) span{animation-delay:.22s;}
 }
 .btn-send:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(137,196,225,0.3);}
 
-/* ═══════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════ */
+
 footer{
   padding:2rem 6%;
   border-top:1px solid var(--border);
@@ -590,9 +527,7 @@ footer{
 .footer-l span{color:var(--blue);}
 .footer-r{font-family:var(--ff-mono);font-size:.68rem;color:var(--text-3);}
 
-/* ═══════════════════════════════════════════
-   TOAST
-═══════════════════════════════════════════ */
+
 .toast{
   position:fixed;bottom:2rem;right:2rem;z-index:999;
   background:var(--surface);border:1px solid var(--blue);
@@ -607,9 +542,7 @@ footer{
 .toast.show{transform:translateY(0);opacity:1;}
 .toast-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;}
 
-/* ═══════════════════════════════════════════
-   MOBILE
-═══════════════════════════════════════════ */
+
 @media(max-width:900px){
   .hero-inner{grid-template-columns:1fr;gap:3rem;text-align:center;}
   .hero-right{order:-1;}
