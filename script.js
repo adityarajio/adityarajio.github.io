@@ -1,4 +1,3 @@
-/* ── Cursor ── */
 const cur = document.getElementById('cursor');
 const ring = document.getElementById('cursor-ring');
 let mx=0,my=0,rx=0,ry=0;
@@ -9,13 +8,12 @@ document.querySelectorAll('a,button,.project-card,.stat-row,.skill-item,.c-socia
   el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';ring.style.width='36px';ring.style.height='36px';});
 });
 
-/* ── Nav scroll ── */
+
 const navEl=document.getElementById('nav');
 window.addEventListener('scroll',()=>{
   navEl.classList.toggle('scrolled',window.scrollY>40);
 },{ passive:true });
 
-/* ── Theme ── */
 const tt=document.getElementById('themeToggle');
 tt.addEventListener('click',()=>{
   const h=document.documentElement;
@@ -25,19 +23,12 @@ tt.addEventListener('click',()=>{
 const st=localStorage.getItem('ar-theme');
 if(st)document.documentElement.dataset.theme=st;
 
-/* ── Burger ── */
 const burger=document.getElementById('burger');
 const navLinks=document.getElementById('navLinks');
 burger.addEventListener('click',()=>navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
 
-/* ── Marquee ── */
-const items=['HTML5','CSS3','JavaScript','Responsive Design','Git & GitHub','UI/UX','Web Performance','Accessibility','Flexbox & Grid','Animations','DOM APIs','Fetch API'];
-const track=document.getElementById('marquee');
-const html=items.map(i=>`<div class="marquee-item"><span class="m-dot">✦</span>${i}</div>`).join('');
-track.innerHTML=html+html; // duplicate for seamless loop
 
-/* ── Scroll reveal ── */
 const revEls=document.querySelectorAll('.rv');
 const revObs=new IntersectionObserver(entries=>{
   entries.forEach((e,i)=>{
@@ -49,7 +40,6 @@ const revObs=new IntersectionObserver(entries=>{
 },{threshold:0.1});
 revEls.forEach(el=>revObs.observe(el));
 
-/* ── Skill bars ── */
 document.querySelectorAll('.skill-fill, .status-fill').forEach(bar=>{
   const w=bar.dataset.w;
   bar.style.width=(parseFloat(w)*100)+'%';
@@ -60,7 +50,6 @@ document.querySelectorAll('.skill-fill, .status-fill').forEach(bar=>{
   obs.observe(bar);
 });
 
-/* ── Skill spotlight effect ── */
 document.querySelectorAll('.skill-item').forEach(item=>{
   item.addEventListener('mousemove',e=>{
     const rect=item.getBoundingClientRect();
@@ -71,7 +60,6 @@ document.querySelectorAll('.skill-item').forEach(item=>{
   });
 });
 
-/* ── Toast ── */
 function showToast(msg){
   const t=document.getElementById('toast');
   document.getElementById('toast-msg').textContent=msg;
@@ -79,8 +67,7 @@ function showToast(msg){
   setTimeout(()=>t.classList.remove('show'),3500);
 }
 
-/* ── Send ── */
-/* ── Send via Formspree ── */
+
 async function sendMsg(){
   const nameEl = document.getElementById('cf-name');
   const emailEl = document.getElementById('cf-email');
@@ -125,8 +112,6 @@ async function sendMsg(){
     btn.innerHTML = originalText;
   }
 }
-
-/* ── Nav active ── */
 const secs=document.querySelectorAll('section[id]');
 const nAs=document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll',()=>{
