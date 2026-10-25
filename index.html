@@ -6,14 +6,17 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Aditya Raj — Aspiring Developer</title>
 
-  <meta name="description" content="Aditya Raj is a developer building web and backend applications with Java, React, Node.js, HTML, and CSS. View my portfolio, skills, and projects." />
-  <meta name="keywords" content="Aditya Raj, Aditya Raj developer, Aditya Raj portfolio, aditya raj io, Java, React, Node.js" />
+  <meta name="description"
+    content="Aditya Raj is a developer building web and backend applications with Java, React, Node.js, HTML, and CSS. View my portfolio, skills, and projects." />
+  <meta name="keywords"
+    content="Aditya Raj, Aditya Raj developer, Aditya Raj portfolio, aditya raj io, Java, React, Node.js" />
   <meta name="author" content="Aditya Raj" />
   <link rel="canonical" href="https://adityarajio.github.io/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Aditya Raj — Aspiring Developer" />
-  <meta property="og:description" content="Developer building projects with Java, React, Node.js, and modern Web Technologies." />
+  <meta property="og:description"
+    content="Developer building projects with Java, React, Node.js, and modern Web Technologies." />
   <meta property="og:url" content="https://adityarajio.github.io/" />
   <meta property="og:image" content="https://adityarajio.github.io/img/profile-picture.jpg" />
 
@@ -55,7 +58,7 @@
     <div class="toast-dot"></div>
     <span id="toast-msg">Message sent!</span>
   </div>
-  
+
   <nav id="nav">
     <div class="nav-logo">
       <div class="nav-logo-dot"></div>
@@ -88,7 +91,8 @@
             <span class="line"><span class="stroke">Shipping</span></span>
           </h1>
           <p class="hero-sub">
-            Hey, I'm <strong>Aditya</strong> — An aspiring developer building projects across the stack with Java, React, and Node.js, and sharing everything I discover along the way.
+            Hey, I'm <strong>Aditya</strong> — An aspiring developer building projects across the stack with Java,
+            React, and Node.js, and sharing everything I discover along the way.
           </p>
           <div class="hero-actions">
             <a href="#projects" class="btn-main">
@@ -129,7 +133,7 @@
         </div>
       </div>
     </section>
-    
+
     <br>
 
     <!-- ABOUT -->
@@ -185,7 +189,8 @@
                 <span class="skill-pct">Proficient</span>
               </div>
               <div class="skill-name">Java</div>
-              <div class="skill-desc">Core foundations, Object-Oriented Programming, and algorithmic problem solving.</div>
+              <div class="skill-desc">Core foundations, Object-Oriented Programming, and algorithmic problem solving.
+              </div>
               <div class="skill-track">
                 <div class="skill-fill" data-w=".85"></div>
               </div>
@@ -197,7 +202,8 @@
                 <span class="skill-pct">Frontend Core</span>
               </div>
               <div class="skill-name">Web Development</div>
-              <div class="skill-desc">HTML5, CSS3, modern JavaScript, semantic architecture, and responsive design.</div>
+              <div class="skill-desc">HTML5, CSS3, modern JavaScript, semantic architecture, and responsive design.
+              </div>
               <div class="skill-track">
                 <div class="skill-fill" data-w=".90"></div>
               </div>
@@ -221,7 +227,8 @@
                 <span class="skill-pct">Backend</span>
               </div>
               <div class="skill-name">Node.js</div>
-              <div class="skill-desc">REST APIs, backend server architecture, asynchronous runtime, and npm packages.</div>
+              <div class="skill-desc">REST APIs, backend server architecture, asynchronous runtime, and npm packages.
+              </div>
               <div class="skill-track">
                 <div class="skill-fill" data-w=".75"></div>
               </div>
@@ -239,12 +246,64 @@
           <h2 class="section-title">Things I'm <span class="dim">building.</span></h2>
         </div>
 
-        <div class="projects-grid" style="text-align: center; padding: 4rem 0;">
-          <p style="font-family: var(--ff-mono); color: var(--text-3);">
-            // Currently no projects made yet.
-            <br>
-            Check back soon for new projects.
-          </p>
+        <div class="projects-grid">
+          <article class="project-card featured rv">
+            <a class="project-shot" href="https://canvasdoc-gamma.vercel.app/" target="_blank" rel="noopener noreferrer"
+              aria-label="Open CanvasDoc live demo">
+              <img src="/img/canvasdoc.png"
+                alt="CanvasDoc screenshot showing a request traced across microservice nodes on a canvas"
+                loading="lazy" />
+            </a>
+
+            <div class="project-body">
+              <div class="project-top">
+                <div class="project-icon">
+                  <img src="/img/canvasdoc-icon.png" alt="Canvas Doc icon" srcset="">
+                </div>
+                <span class="project-tag">Featured · Web App</span>
+              </div>
+
+              <h3 class="project-name">CanvasDoc</h3>
+              <p class="project-sub">Spatial runtime &amp; self-healing debugger</p>
+
+              <p class="project-desc">
+                Trace a request across microservices on one canvas, find the real root
+                cause, and let AI fix the failing node. Then prove the fix by running
+                the whole pipeline again.
+              </p>
+
+              <ul class="project-points">
+                <li>Real execution: TypeScript is compiled and run in a sandboxed Web Worker</li>
+                <li>Real PostgreSQL in the browser using PGlite (WebAssembly)</li>
+                <li>Root-cause detection plus a network inspector for every hop</li>
+                <li>Gemini auto-heal, validated by re-running the pipeline</li>
+              </ul>
+
+              <div class="project-stack">
+                <span>Next.js</span>
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Tailwind</span>
+                <span>React Flow</span>
+                <span>PGlite</span>
+                <span>Gemini API</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://canvasdoc-gamma.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  class="btn-main project-btn">
+                  Live Demo
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M7 17L17 7M7 7h10v10" />
+                  </svg>
+                </a>
+                <a href="https://github.com/adityarajio/canvasdoc" target="_blank" rel="noopener noreferrer"
+                  class="btn-outline project-btn">
+                  View Code
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -263,16 +322,19 @@
               message. I respond fast.</p>
             <div class="contact-socials">
               <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/in/adityarajio/" target="_blank" rel="noopener noreferrer" class="c-social">
+              <a href="https://www.linkedin.com/in/adityarajio/" target="_blank" rel="noopener noreferrer"
+                class="c-social">
                 <div class="c-social-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                     <rect x="2" y="9" width="4" height="12" />
                     <circle cx="4" cy="4" r="2" />
                   </svg>
                 </div>
                 <span>LinkedIn — Aditya Raj</span>
-                <svg class="c-social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg class="c-social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
@@ -281,26 +343,31 @@
               <a href="https://github.com/adityarajio" target="_blank" rel="noopener noreferrer" class="c-social">
                 <div class="c-social-icon">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                   </svg>
                 </div>
                 <span>GitHub — @adityarajio</span>
-                <svg class="c-social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg class="c-social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
 
               <!-- Instagram -->
-              <a href="https://www.instagram.com/adityaraj_io/" target="_blank" rel="noopener noreferrer" class="c-social">
+              <a href="https://www.instagram.com/adityaraj_io/" target="_blank" rel="noopener noreferrer"
+                class="c-social">
                 <div class="c-social-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                     <circle cx="12" cy="12" r="4" />
                     <circle cx="18" cy="6" r="1" fill="currentColor" />
                   </svg>
                 </div>
                 <span>Instagram — @adityaraj_io</span>
-                <svg class="c-social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg class="c-social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
@@ -314,7 +381,8 @@
                   </svg>
                 </div>
                 <span>rajjeeaditya@gmail.com</span>
-                <svg class="c-social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg class="c-social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
